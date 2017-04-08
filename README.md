@@ -1,5 +1,5 @@
 # keras-notes
-Personal notes on using keras
+Personal notes on using [keras](https://keras.io)
 
 ## Example Programs
 
