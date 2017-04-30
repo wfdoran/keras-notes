@@ -48,12 +48,9 @@ n_outputs = len(y_train2[0])
 
 # set up the neural net
 model = Sequential()
-model.add(Dense(n_hidden1, input_dim = n_inputs))
-model.add(Activation('relu'))
-model.add(Dense(n_hidden2))
-model.add(Activation('relu'))
-model.add(Dense(n_outputs))
-model.add(Activation('softmax'))
+model.add(Dense(n_hidden1, activation='relu', input_dim = n_inputs))
+model.add(Dense(n_hidden2, activation='relu'))
+model.add(Dense(n_outputs, activation='softmax'))
 
 # compile it
 model.compile(optimizer='sgd', loss='categorical_crossentropy')
@@ -61,7 +58,7 @@ model.compile(optimizer='sgd', loss='categorical_crossentropy')
 # train the neural net
 XX = np.array(X_train, dtype=float)
 yy = np.array(y_train2, dtype=float)
-model.fit(XX, yy, epochs=50, batch_size=16, verbose=1)
+model.fit(XX, yy, epochs=40, batch_size=16, verbose=1)
 
 # how does it do on the training data?
 print("On training data:")
