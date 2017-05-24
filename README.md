@@ -13,11 +13,14 @@ Another simple example which learns the [sklearn digits](http://scikit-learn.org
 
 Note: gives a warning message.  [known issue](https://github.com/tensorflow/tensorflow/issues/8253)
 
-### [keras3.py](example/keras3.py)
+### [keras3.py](examples/keras3.py)
 
 Again learning the digit data.  Using dropout to avoid overfitting.  Also using PCA from
 sklearn to preprocess the data and speed things up.
 
+### [keras4.py](examples/keras4.py)
+
+Using 2D Convolutional Layer.  
 
 ## Backend
 
